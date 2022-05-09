@@ -18,20 +18,28 @@ function criaPrimeiraFrase(num1, num2) {
 
 function criaSegundaFrase(num1, num2) {
    const soma = num1 + num2;
-   let resultado10 = 'menor';
-   let resultado20 = 'menor';
+   let resultado10 = 'menor que';
+   let resultado20 = 'menor que';
    const compara10 = soma > 10;
    const compara20 = soma > 20;
 
    if (compara10) {
-      resultado10 = 'maior';
+      resultado10 = 'maior que';
+   }
+
+   if (soma == 10) {
+      resultado10 = 'igual a';
    }
 
    if (compara20) {
-      resultado20 = 'maior';
+      resultado20 = 'maior que';
+   }
+   
+   if (soma == 20) {
+      resultado20 = 'igual a';
    }
 
-   return `Sua soma é ${soma}, que é ${resultado10} que 10 e ${resultado20} que 20. `
+   return `Sua soma é ${soma}, que é ${resultado10} 10 e ${resultado20} 20. `
 }
 
-console.log(comparaNumeros(3, 1));
+console.log(comparaNumeros(5,3));
